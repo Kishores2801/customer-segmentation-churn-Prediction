@@ -15,9 +15,9 @@ warnings.filterwarnings("ignore")
 
 BASE_DIR = os.path.dirname(os.path.abspath(__file__))
 
-data_path = os.path.join(BASE_DIR, "..", "src", "data", "Churn_Data_Final.parquet")
-model_path = os.path.join(BASE_DIR, "..","src", "models", "churn_champion_model.h5")
-scaler_path = os.path.join(BASE_DIR, "..","src", "models", "scaler.pkl")
+data_path = os.path.join(BASE_DIR, "data", "Churn_Data_Final.parquet")
+model_path = os.path.join(BASE_DIR, "models", "churn_champion_model.h5")
+scaler_path = os.path.join(BASE_DIR, "models", "scaler.pkl")
 
 data = pd.read_parquet(data_path)
 model = tf.keras.models.load_model(model_path, compile=False)
